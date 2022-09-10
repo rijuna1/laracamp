@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Database\Eloquent\softDeletes;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
@@ -24,10 +24,7 @@ class User extends Authenticatable
         'password',
         'avatar',
         'occupation',
-        'is_admin',
-        'created_by',
-        'updated_by',
-        'deleted_by'
+        'is_admin'
     ];
 
     /**
