@@ -15,17 +15,14 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->string('name',50);
+            $table->string('email',100)->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->nullable();
-            $table->string('avatar')->nullable();
-            $table->string('occupation')->nullable();
+            $table->string('password', 100)->nullable();
+            $table->string('avatar', 100)->nullable();
+            $table->string('occupation', 50)->nullable();
             $table->boolean('is_admin')->default(false);
             $table->rememberToken();
-            $table->string('created_by')->nullable();
-            $table->string('updated_by')->nullable();
-            $table->string('deleted_by')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
